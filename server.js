@@ -16,7 +16,10 @@ server.route({
 });
 
 // Register plugins and start server
-server.register([require('./plugins/timestamp')], {
+server.register([
+  require('./plugins/timestamp'),
+  require('./plugins/whoami')
+], {
   routes: {
     prefix: '/api'    
   }
